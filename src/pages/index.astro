@@ -1,6 +1,9 @@
 ---
 import '../styles/global.css';
 import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Pricing from '../components/Pricing.astro';
 ---
 
 <html lang="es">
@@ -20,33 +23,13 @@ import Navbar from '../components/Navbar.astro';
 
 		<main>
 			<!-- Hero Section -->
-			<section id="inicio" class="min-h-screen">
-				<div class="flex flex-col items-center justify-center gap-8 px-6 min-h-screen">
-					<!-- Temporary Coming Soon Content -->
-					<div class="mb-8">
-						<img src="/images/Notifika-landing.png" alt="Notifika" width="300" height="300" style="object-fit: contain;" />
-					</div>
-					<h1 class="text-5xl md:text-6xl font-bold text-accent text-center tracking-wider">
-						COMING SOON
-					</h1>
-					<p class="text-center text-icons mt-12 max-w-md">
-						Estamos preparando algo especial para ti.
-					</p>
-					<p class="text-center text-icons max-w-md">
-						¡Vuelve pronto!
-					</p>
-				</div>
-			</section>
+			<Hero />
 
-			<!-- Características Section (placeholder) -->
-			<section id="caracteristicas" class="min-h-screen bg-cards">
-				<!-- To be implemented -->
-			</section>
+			<!-- Características Section -->
+			<Features />
 
-			<!-- Precios Section (placeholder) -->
-			<section id="precios" class="min-h-screen bg-background">
-				<!-- To be implemented -->
-			</section>
+			<!-- Precios Section -->
+			<Pricing />
 
 			<!-- Contacto Section (placeholder) -->
 			<section id="contacto" class="min-h-screen bg-cards">

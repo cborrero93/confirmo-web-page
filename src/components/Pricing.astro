@@ -1,0 +1,297 @@
+---
+// Pricing Section Component
+const plans = [
+  {
+    id: 1,
+    name: 'Gratis',
+    price: 0,
+    clients: 3,
+    popular: false,
+    description: 'Perfecto para comenzar',
+  },
+  {
+    id: 2,
+    name: 'Esencial',
+    price: 12.99,
+    clients: 15,
+    popular: false,
+    description: 'Para negocios pequeños',
+  },
+  {
+    id: 3,
+    name: 'Plus',
+    price: 29.99,
+    clients: 50,
+    popular: true,
+    description: 'El más elegido',
+  },
+  {
+    id: 4,
+    name: 'Pro',
+    price: 59.99,
+    clients: 100,
+    popular: false,
+    description: 'Para negocios en crecimiento',
+  },
+  {
+    id: 5,
+    name: 'Pro Plus',
+    price: 89.99,
+    clients: 200,
+    popular: false,
+    description: 'Para operaciones grandes',
+  },
+  {
+    id: 6,
+    name: 'Enterprise',
+    price: 195.00,
+    clients: 400,
+    popular: false,
+    description: 'Para empresas establecidas',
+  },
+];
+
+const features = [
+  'Notificaciones por WhatsApp, Email y SMS',
+  'Recurrencias automáticas ilimitadas',
+  'Apps iOS y Android',
+  'Confirmaciones automáticas',
+  'Soporte por email',
+];
+---
+
+<section id="precios" class="py-20 lg:py-28 bg-background">
+  <div class="container mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-16 max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-6">
+        Planes que se adaptan a <span class="text-accent">tu negocio</span>
+      </h2>
+      <p class="text-lg text-icons">
+        Elige el plan perfecto según el tamaño de tu cartera de clientes. Todos incluyen las mismas funcionalidades.
+      </p>
+    </div>
+
+    <!-- Pricing Cards Container -->
+    <!-- Desktop: Grid horizontal, Mobile: Scroll horizontal -->
+    <div class="relative">
+      <!-- Mobile: Scroll horizontal hint -->
+      <div class="md:hidden text-center mb-4">
+        <p class="text-sm text-icons flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+          </svg>
+          Desliza para ver todos los planes
+        </p>
+      </div>
+
+      <!-- Pricing Grid -->
+      <div class="pricing-container overflow-x-auto pb-8 md:pb-0">
+        <div class="pricing-grid flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 min-w-max md:min-w-0">
+          {plans.map((plan, index) => (
+            <div
+              class={`pricing-card relative bg-primary rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border-2 w-[260px] md:w-auto md:min-w-0 ${
+                plan.popular
+                  ? 'border-accent scale-105 md:scale-110 pt-10'
+                  : 'border-border hover:border-accent/30'
+              }`}
+              data-index={index}
+            >
+              <!-- Popular Badge -->
+              {plan.popular && (
+                <div class="absolute top-2 left-1/2 transform -translate-x-1/2">
+                  <span class="bg-accent text-primary px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                    Más Popular
+                  </span>
+                </div>
+              )}
+
+              <!-- Plan Header -->
+              <div class="text-center mb-6 pt-2">
+                <h3 class="text-2xl font-bold text-text mb-2">
+                  {plan.name}
+                </h3>
+                <p class="text-sm text-icons mb-4">
+                  {plan.description}
+                </p>
+
+                <!-- Price -->
+                <div class="mb-4">
+                  {plan.price === 0 ? (
+                    <div class="text-5xl font-bold text-accent">
+                      Gratis
+                    </div>
+                  ) : (
+                    <div>
+                      <span class="text-4xl lg:text-5xl font-bold text-accent">
+                        ${plan.price}
+                      </span>
+                      <span class="text-icons text-lg">
+                        /mes
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <!-- Clients Count -->
+                <div class="bg-cards rounded-lg py-3 px-4">
+                  <p class="text-text font-semibold">
+                    Hasta <span class="text-accent text-xl">{plan.clients}</span> clientes
+                  </p>
+                </div>
+              </div>
+
+              <!-- Features List -->
+              <div class="mb-8 space-y-3">
+                {features.map((feature) => (
+                  <div class="flex items-start gap-3">
+                    <svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="text-sm text-text">
+                      {feature}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <!-- CTA Button -->
+              <a
+                href="#contacto"
+                class={`block w-full text-center py-3.5 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-accent text-primary hover:opacity-90 hover:shadow-lg hover:scale-105'
+                    : 'bg-cards text-accent border-2 border-accent hover:bg-accent hover:text-primary'
+                }`}
+              >
+                {plan.price === 0 ? 'Comenzar Gratis' : 'Elegir Plan'}
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Scroll indicators for mobile (decorative) -->
+      <div class="md:hidden flex justify-center gap-2 mt-4">
+        {plans.map((_, index) => (
+          <div class="w-2 h-2 rounded-full bg-border"></div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Additional Info -->
+    <div class="text-center mt-12 max-w-2xl mx-auto">
+      <p class="text-icons text-sm">
+        Todos los planes incluyen las mismas funcionalidades. La diferencia está solo en la cantidad de clientes que puedes gestionar.
+        <br />
+        <span class="text-text font-semibold">Sin comisiones ocultas. Sin permanencia.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Intersection Observer for scroll-triggered animations
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all pricing cards
+  document.addEventListener('DOMContentLoaded', () => {
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    pricingCards.forEach((card) => {
+      observer.observe(card);
+    });
+  });
+</script>
+
+<style>
+  /* Horizontal scroll container for mobile */
+  .pricing-container {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-border);
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  .pricing-container::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .pricing-container::-webkit-scrollbar-track {
+    background: var(--color-cards);
+    border-radius: 10px;
+  }
+
+  .pricing-container::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 10px;
+  }
+
+  .pricing-container::-webkit-scrollbar-thumb:hover {
+    background: var(--color-red);
+  }
+
+  /* Pricing grid adjustments */
+  .pricing-grid {
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .pricing-grid {
+      padding: 0;
+    }
+  }
+
+  /* Initial state - hidden */
+  .pricing-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* Animated state - visible */
+  .pricing-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger animation delays */
+  .pricing-card[data-index="0"] {
+    transition-delay: 0ms;
+  }
+  .pricing-card[data-index="1"] {
+    transition-delay: 100ms;
+  }
+  .pricing-card[data-index="2"] {
+    transition-delay: 200ms;
+  }
+  .pricing-card[data-index="3"] {
+    transition-delay: 300ms;
+  }
+  .pricing-card[data-index="4"] {
+    transition-delay: 400ms;
+  }
+  .pricing-card[data-index="5"] {
+    transition-delay: 500ms;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .pricing-card {
+      transition: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+</style>
