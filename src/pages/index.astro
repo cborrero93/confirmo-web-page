@@ -1,34 +1,57 @@
 ---
 import '../styles/global.css';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/images/notifika-favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Notifika - Coming Soon</title>
+		<meta name="description" content="Notifika - Agenda una vez y confirma siempre. Plataforma de gestión de citas con notificaciones automatizadas por WhatsApp, email y SMS." />
+		<title>Notifika - Agenda una vez y confirma siempre</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 	</head>
-	<body class="bg-background text-text min-h-screen flex items-center justify-center">
-		<div class="flex flex-col items-center justify-center gap-8 px-6 ">
-			<!-- Logo -->
-			<div class="mb-8">
-				<img src="/images/Notifika-landing.png" alt="Notifika" width="300" height="300" style="object-fit: contain;" />
-			</div>
+	<body class="bg-background text-text">
+		<Navbar />
 
-			<!-- Main Title -->
-			<h1 class="text-5xl md:text-6xl font-bold text-accent text-center tracking-wider">
-				COMING SOON
-			</h1>
+		<main>
+			<!-- Hero Section -->
+			<section id="inicio" class="min-h-screen">
+				<div class="flex flex-col items-center justify-center gap-8 px-6 min-h-screen">
+					<!-- Temporary Coming Soon Content -->
+					<div class="mb-8">
+						<img src="/images/Notifika-landing.png" alt="Notifika" width="300" height="300" style="object-fit: contain;" />
+					</div>
+					<h1 class="text-5xl md:text-6xl font-bold text-accent text-center tracking-wider">
+						COMING SOON
+					</h1>
+					<p class="text-center text-icons mt-12 max-w-md">
+						Estamos preparando algo especial para ti.
+					</p>
+					<p class="text-center text-icons max-w-md">
+						¡Vuelve pronto!
+					</p>
+				</div>
+			</section>
 
-			<!-- Subtitle (Optional) -->
-			<p class="text-center text-icons mt-12 max-w-md">
-				Estamos preparando algo especial para ti.
-			</p>
-			<p class="text-center text-icons max-w-md">
-				 ¡Vuelve pronto!
-			</p>
-		</div>
+			<!-- Características Section (placeholder) -->
+			<section id="caracteristicas" class="min-h-screen bg-cards">
+				<!-- To be implemented -->
+			</section>
+
+			<!-- Precios Section (placeholder) -->
+			<section id="precios" class="min-h-screen bg-background">
+				<!-- To be implemented -->
+			</section>
+
+			<!-- Contacto Section (placeholder) -->
+			<section id="contacto" class="min-h-screen bg-cards">
+				<!-- To be implemented -->
+			</section>
+		</main>
 	</body>
 </html>

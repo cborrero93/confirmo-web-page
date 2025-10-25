@@ -1,11 +1,15 @@
 // @ts-check
 import { defineConfig } from "astro/config"
-import tailwindcss from "@tailwindcss/vite"
+import react from "@astrojs/react"
+import tailwind from "@astrojs/tailwind"
 
 export default defineConfig({
-  vite: {
-    plugins: [tailwindcss()],
-  },
+  integrations: [
+    react(),
+    tailwind({
+      applyBaseStyles: false, // Disable default base styles
+    }),
+  ],
   output: "static",
   build: {
     assets: "_astro",
