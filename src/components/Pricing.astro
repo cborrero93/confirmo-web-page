@@ -5,15 +5,15 @@ const plans = [
     id: 1,
     name: 'Gratis',
     price: 0,
-    clients: 3,
+    notifications: 5,
     popular: false,
     description: 'Perfecto para comenzar',
   },
   {
     id: 2,
     name: 'Esencial',
-    price: 12.99,
-    clients: 15,
+    price: 10.99,
+    notifications: 50,
     popular: false,
     description: 'Para negocios pequeños',
   },
@@ -21,7 +21,7 @@ const plans = [
     id: 3,
     name: 'Plus',
     price: 29.99,
-    clients: 50,
+    notifications: 200,
     popular: true,
     description: 'El más elegido',
   },
@@ -29,30 +29,15 @@ const plans = [
     id: 4,
     name: 'Pro',
     price: 59.99,
-    clients: 100,
+    notifications: 400,
     popular: false,
     description: 'Para negocios en crecimiento',
   },
-  {
-    id: 5,
-    name: 'Pro Plus',
-    price: 89.99,
-    clients: 200,
-    popular: false,
-    description: 'Para operaciones grandes',
-  },
-  {
-    id: 6,
-    name: 'Enterprise',
-    price: 195.00,
-    clients: 400,
-    popular: false,
-    description: 'Para empresas establecidas',
-  },
+
 ];
 
 const features = [
-  'Notificaciones por WhatsApp, Email y SMS',
+  'Notificaciones por WhatsApp',
   'Recurrencias automáticas ilimitadas',
   'Apps iOS y Android',
   'Confirmaciones automáticas',
@@ -60,8 +45,8 @@ const features = [
 ];
 ---
 
-<section id="precios" class="py-20 lg:py-28 bg-background">
-  <div class="container mx-auto px-6">
+<section id="precios" class="py-30 lg:py-28 bg-background">
+  <div class="container mx-auto">
     <!-- Section Header -->
     <div class="text-center mb-16 max-w-3xl mx-auto">
       <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-6">
@@ -87,10 +72,10 @@ const features = [
 
       <!-- Pricing Grid -->
       <div class="pricing-container overflow-x-auto pb-8 md:pb-0">
-        <div class="pricing-grid flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 min-w-max md:min-w-0">
+        <div class="pricing-grid flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 min-w-max md:min-w-0 m-10 sm:m-5">
           {plans.map((plan, index) => (
             <div
-              class={`pricing-card relative bg-primary rounded-2xl p-6 md:p-8 shadow-lg transition-all duration-300 hover:shadow-2xl border-2 w-[260px] md:w-auto md:min-w-0 ${
+              class={`pricing-card relative bg-primary rounded-2xl p-6 md:p-8 shadow-md transition-all duration-300 hover:shadow-xl border-2 w-[260px] md:w-auto md:min-w-0 ${
                 plan.popular
                   ? 'border-accent scale-105 md:scale-110 pt-10'
                   : 'border-border hover:border-accent/30'
@@ -133,10 +118,10 @@ const features = [
                   )}
                 </div>
 
-                <!-- Clients Count -->
+                <!-- notifications Count -->
                 <div class="bg-cards rounded-lg py-3 px-4">
                   <p class="text-text font-semibold">
-                    Hasta <span class="text-accent text-xl">{plan.clients}</span> clientes
+                    Hasta <span class="text-accent text-xl">{plan.notifications}</span> notificaciones al mes
                   </p>
                 </div>
               </div>
@@ -182,7 +167,7 @@ const features = [
     <!-- Additional Info -->
     <div class="text-center mt-12 max-w-2xl mx-auto">
       <p class="text-icons text-sm">
-        Todos los planes incluyen las mismas funcionalidades. La diferencia está solo en la cantidad de clientes que puedes gestionar.
+        Todos los planes incluyen las mismas funcionalidades. La diferencia está solo en la cantidad de notificaciones que puedes gestionar.
         <br />
         <span class="text-text font-semibold">Sin comisiones ocultas. Sin permanencia.</span>
       </p>
@@ -244,12 +229,12 @@ const features = [
 
   /* Pricing grid adjustments */
   .pricing-grid {
-    padding: 0 1rem;
+    padding: 1.5rem 1.5rem;
   }
 
   @media (min-width: 768px) {
     .pricing-grid {
-      padding: 0;
+      padding: 1rem 0;
     }
   }
 
