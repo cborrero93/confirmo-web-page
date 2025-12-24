@@ -1,58 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const sections = [
-  {
-    title: "Introducción",
-    content: "[PLACEHOLDER: Bienvenido a los términos y condiciones de Confirmo. Por favor, lee cuidadosamente este documento antes de usar nuestros servicios. Al acceder y utilizar nuestra plataforma, aceptas estar sujeto a estos términos.]"
-  },
-  {
-    title: "Aceptación de Términos",
-    content: "[PLACEHOLDER: Al registrarte y usar Confirmo, confirmas que has leído, entendido y aceptado estos términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro servicio.]"
-  },
-  {
-    title: "Descripción del Servicio",
-    content: "[PLACEHOLDER: Confirmo es una plataforma de gestión de citas con notificaciones automatizadas. Nuestro servicio permite a los usuarios programar citas, enviar recordatorios automáticos por WhatsApp y gestionar servicios recurrentes.]"
-  },
-  {
-    title: "Registro y Cuenta de Usuario",
-    content: "[PLACEHOLDER: Para utilizar Confirmo, debes crear una cuenta proporcionando información precisa y actualizada. Eres responsable de mantener la confidencialidad de tus credenciales de acceso y de todas las actividades que ocurran bajo tu cuenta.]"
-  },
-  {
-    title: "Uso Aceptable",
-    content: "[PLACEHOLDER: Te comprometes a utilizar Confirmo únicamente para fines legítimos y de acuerdo con estos términos. No debes usar el servicio para enviar spam, contenido ilegal, o para cualquier actividad que viole los derechos de terceros.]"
-  },
-  {
-    title: "Privacidad y Protección de Datos",
-    content: "[PLACEHOLDER: El uso de tus datos personales está regido por nuestra Política de Privacidad. Al usar Confirmo, aceptas la recopilación y uso de tu información según se describe en dicha política.]"
-  },
-  {
-    title: "Propiedad Intelectual",
-    content: "[PLACEHOLDER: Todos los derechos de propiedad intelectual sobre Confirmo, incluyendo el software, diseño, contenido y marca, son propiedad de Confirmo o de sus licenciantes. No puedes copiar, modificar o distribuir ningún elemento sin autorización.]"
-  },
-  {
-    title: "Limitación de Responsabilidad",
-    content: "[PLACEHOLDER: Confirmo se proporciona 'tal cual' sin garantías de ningún tipo. No nos hacemos responsables de daños indirectos, incidentales o consecuentes derivados del uso del servicio. Nuestra responsabilidad máxima se limita al importe pagado por el servicio.]"
-  },
-  {
-    title: "Modificaciones del Servicio",
-    content: "[PLACEHOLDER: Nos reservamos el derecho de modificar, suspender o discontinuar el servicio en cualquier momento. También podemos actualizar estos términos periódicamente. Te notificaremos sobre cambios importantes con antelación razonable.]"
-  },
-  {
-    title: "Terminación",
-    content: "[PLACEHOLDER: Puedes cancelar tu cuenta en cualquier momento. Nos reservamos el derecho de suspender o terminar tu acceso al servicio si violas estos términos o por cualquier otra razón justificada.]"
-  },
-  {
-    title: "Ley Aplicable",
-    content: "[PLACEHOLDER: Estos términos se rigen por las leyes de España. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales españoles.]"
-  },
-  {
-    title: "Contacto",
-    content: "[PLACEHOLDER: Si tienes preguntas sobre estos términos y condiciones, puedes contactarnos en: hola@confirmoapp.com]"
-  }
-];
-
-const lastUpdated = "23 de diciembre de 2025";
+const lastUpdated = 'January 1, 2026';
 ---
 
 <BaseLayout
@@ -75,18 +24,269 @@ const lastUpdated = "23 de diciembre de 2025";
   <section class="py-12 lg:py-16 bg-primary">
     <div class="container mx-auto px-6 max-w-4xl">
       <div class="space-y-12">
-        {sections.map((section, index) => (
-          <div class="legal-section">
-            <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
-              <span class="text-accent">{index + 1}.</span> {section.title}
-            </h2>
-            <div class="prose prose-lg">
-              <p class="text-base md:text-lg text-text leading-relaxed">
-                {section.content}
+        <!-- Introducción -->
+        <div class="legal-section" id="bienvenida">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">Bienvenido a Confirmo</h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-6">
+            Al suscribirte a nuestro servicio, estás aceptando los siguientes términos y
+            condiciones. Te animamos a leer la siguiente información con atención antes de
+            suscribirte.
+          </p>
+          <div class="bg-background p-4 rounded-lg border-l-4 border-accent">
+            <p class="text-base text-text leading-relaxed">
+              <strong>Nota:</strong> El uso de esta aplicación en dispositivos iOS también está sujeto
+              al
+              <a
+                href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-accent hover:underline font-semibold"
+                >Acuerdo de Licencia de Usuario Final (EULA) de Apple</a
+              >.
+            </p>
+          </div>
+        </div>
+
+        <!-- 1. Servicio de Suscripción -->
+        <div class="legal-section" id="servicio">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">1.</span> Servicio de Suscripción
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Confirmo ofrece una suscripción mensual que te da acceso a herramientas diseñadas para
+            gestionar agendas con envío de recordatorio automáticos por WhatsApp además de
+            permitirte utilizar las siguientes funcionalidades:
+          </p>
+          <ul class="list-disc ml-6 space-y-2 mb-4">
+            <li class="text-text leading-relaxed">Crear clientes</li>
+            <li class="text-text leading-relaxed">Crear eventos</li>
+            <li class="text-text leading-relaxed">
+              Establecer recurrencias automáticas para los eventos
+            </li>
+            <li class="text-text leading-relaxed">
+              Enviar recordatorios automáticos a tus clientes
+            </li>
+          </ul>
+        </div>
+
+        <!-- 2. Periodo de Prueba -->
+        <div class="legal-section" id="prueba">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">2.</span> Periodo de Prueba
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Los usuarios nuevos disfrutan de un periodo de prueba gratuito de <strong>7 días</strong
+            >. Si decides no continuar con la suscripción antes de que finalice el periodo de
+            prueba, no se te cobrará.
+          </p>
+        </div>
+
+        <!-- 3. Precio y Renovación Automática -->
+        <div class="legal-section" id="precios">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">3.</span> Precio y Renovación Automática
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-6">
+            Precios actuales de suscripción:
+          </p>
+
+          <div class="bg-background rounded-lg p-6 space-y-4 mb-6">
+            <div class="border-l-4 border-accent pl-4">
+              <h4 class="font-semibold text-text text-lg">Esencial</h4>
+              <p class="text-text mt-2">
+                <span class="text-accent font-bold text-xl">$12.99/mes</span>
+              </p>
+              <p class="text-icons text-sm mt-1">
+                50 recordatorios al mes ya sea por WhatsApp u otro servicio de mensajería más
+                impuestos aplicables.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-accent pl-4">
+              <h4 class="font-semibold text-text text-lg">Plus</h4>
+              <p class="text-text mt-2">
+                <span class="text-accent font-bold text-xl">$29.99/mes</span>
+              </p>
+              <p class="text-icons text-sm mt-1">
+                200 recordatorios al mes ya sea por WhatsApp u otro servicio de mensajería más
+                impuestos aplicables.
+              </p>
+            </div>
+
+            <div class="border-l-4 border-accent pl-4">
+              <h4 class="font-semibold text-text text-lg">Pro</h4>
+              <p class="text-text mt-2">
+                <span class="text-accent font-bold text-xl">$59.99/mes</span>
+              </p>
+              <p class="text-icons text-sm mt-1">
+                400 recordatorios al mes ya sea por WhatsApp u otro servicio de mensajería más
+                impuestos aplicables.
               </p>
             </div>
           </div>
-        ))}
+
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            <strong>Renovación:</strong> Tu suscripción se renovará automáticamente cada mes.
+          </p>
+        </div>
+
+        <!-- 4. Cambios en el Precio -->
+        <div class="legal-section" id="cambios-precio">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">4.</span> Cambios en el Precio y Notificaciones de Aumento
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Si decidimos cambiar el precio de la suscripción, te notificaremos al menos un mes antes
+            del cambio a través del correo electrónico asociado a tu cuenta y mediante una
+            notificación en la aplicación.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Al continuar con la suscripción después de haber sido notificado sobre un aumento de
+            precios, se entenderá que aceptas el nuevo costo.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Tendrás la opción de aceptar el nuevo precio o cancelar tu suscripción antes de que el
+            cambio de precio entre en vigor.
+          </p>
+        </div>
+
+        <!-- 5. Política de Cancelación -->
+        <div class="legal-section" id="cancelacion">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">5.</span> Política de Cancelación
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            <strong>Cómo Cancelar:</strong> Puedes cancelar tu suscripción en cualquier momento desde
+            tu dispositivo iOS con los siguientes pasos:
+          </p>
+          <ol class="list-decimal ml-6 space-y-2 mb-6">
+            <li class="text-text leading-relaxed">
+              Ve a Ajustes &gt; [tu nombre] &gt; iTunes &amp; App Store
+            </li>
+            <li class="text-text leading-relaxed">
+              Toca tu ID de Apple en la parte superior de la pantalla y luego Ver ID de Apple
+            </li>
+            <li class="text-text leading-relaxed">Desplázate hacia abajo y toca Suscripciones</li>
+            <li class="text-text leading-relaxed">
+              Elige la suscripción a Confirmo y toca Cancelar Suscripción
+            </li>
+          </ol>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            <strong>Efecto de la Cancelación:</strong> La cancelación será efectiva al final del ciclo
+            de facturación actual. No se emitirán reembolsos por períodos de suscripción no utilizados.
+          </p>
+        </div>
+
+        <!-- 6. Uso Justo y Conducta del Usuario -->
+        <div class="legal-section" id="uso-justo">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">6.</span> Uso Justo y Conducta del Usuario
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Esperamos que todos los usuarios utilicen los servicios de Confirmo de manera
+            responsable y respetuosa. Cualquier uso indebido de los servicios puede resultar en la
+            suspensión o terminación de la suscripción.
+          </p>
+        </div>
+
+        <!-- 7. Soporte y Contacto -->
+        <div class="legal-section" id="soporte">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">7.</span> Soporte y Contacto
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Si necesitas asistencia con nuestra aplicación o servicios, por favor contacta a nuestro
+            equipo de soporte:
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Email: <a
+              href="mailto:hola@confirmoapp.com"
+              class="text-accent hover:underline font-semibold">hola@confirmoapp.com</a
+            >
+          </p>
+        </div>
+
+        <!-- 8. Privacidad y Protección de Datos -->
+        <div class="legal-section" id="privacidad">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">8.</span> Privacidad y Protección de Datos
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Nos comprometemos a proteger tu privacidad y datos personales de acuerdo con nuestra
+            <a href="/privacy" class="text-accent hover:underline font-semibold"
+              >Política de Privacidad</a
+            >.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Para obtener más detalles, te recomendamos revisar nuestra Política de Privacidad
+            completa y las preguntas frecuentes en nuestro sitio web.
+          </p>
+        </div>
+
+        <!-- 9. Acuerdo de Licencia de Usuario Final de Apple -->
+        <div class="legal-section" id="eula">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">9.</span> Acuerdo de Licencia de Usuario Final de Apple
+          </h2>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Además de estos términos, el uso de la aplicación Confirmo está también regulado por el
+            Acuerdo de Licencia de Usuario Final de Apple (EULA), que es un contrato legal entre el
+            comprador o usuario final de la aplicación y Apple.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Para ver los términos del EULA de Apple, por favor visita el siguiente enlace: <a
+              href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-accent hover:underline font-semibold">EULA de Apple</a
+            >.
+          </p>
+        </div>
+
+        <!-- 10. Restricciones de Uso y Propiedad Intelectual -->
+        <div class="legal-section" id="propiedad">
+          <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+            <span class="text-accent">10.</span> Restricciones de Uso y Propiedad Intelectual
+          </h2>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-text mt-6 mb-4">
+            Restricciones de Uso
+          </h3>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Como usuario de Confirmo, te comprometes a no realizar ingeniería inversa, descompilar,
+            desensamblar, modificar, crear obras derivadas, distribuir, licenciar, o vender
+            cualquier software o contenido de la aplicación.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-6">
+            El uso indebido o no autorizado de la aplicación, incluida la ingeniería inversa, es
+            estrictamente prohibido y puede resultar en la terminación inmediata de tu suscripción y
+            acciones legales.
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-text mt-6 mb-4">
+            Propiedad Intelectual
+          </h3>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-4">
+            Todos los derechos, títulos e intereses en Confirmo, incluyendo, pero no limitado a, su
+            código, interfaces, gráficos, diseño, compilación, información, y todos los demás
+            elementos de la aplicación son propiedad exclusiva de CBG Services LLC o sus
+            licenciantes.
+          </p>
+          <p class="text-base md:text-lg text-text leading-relaxed mb-6">
+            El uso de la aplicación no te otorga propiedad de ningún derecho de propiedad
+            intelectual en la aplicación o el acceso a ella.
+          </p>
+
+          <h3 class="text-xl md:text-2xl font-semibold text-text mt-6 mb-4">
+            Protección de la Propiedad Intelectual
+          </h3>
+          <p class="text-base md:text-lg text-text leading-relaxed">
+            Aceptas respetar y proteger los derechos de propiedad intelectual de CBG Services LLC
+            relacionados con Confirmo. Cualquier uso no autorizado de la aplicación que infrinja los
+            derechos de propiedad intelectual puede resultar en acciones legales y responsabilidades
+            civiles y/o penales.
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -108,11 +308,11 @@ const lastUpdated = "23 de diciembre de 2025";
 
   .prose strong {
     font-weight: 600;
-    color: #3C3D3A;
+    color: #3c3d3a;
   }
 
   .prose a {
-    color: #C96442;
+    color: #c96442;
     text-decoration: underline;
   }
 

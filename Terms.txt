@@ -1,0 +1,106 @@
+﻿Términos de Uso y Política de Suscripción de Confirmo
+Bienvenido a Confirmo
+Al suscribirte a nuestro servicio, estás aceptando los siguientes términos y condiciones. Te animamos a leer la siguiente información con atención antes de suscribirte.
+
+
+Nota: El uso de esta aplicación en dispositivos iOS también está sujeto al Acuerdo de Licencia de Usuario Final (EULA) de Apple, que puede ser encontrado  aquí.
+
+
+1. Servicio de Suscripción
+
+
+Confirmo ofrece una suscripción mensual que te da acceso a herramientas diseñadas para gestionar agendas con envío de recordatorio automáticos por Whatsapp ademas de permitirte utilizar las siguientes funcionalidades:
+
+
+Crear clientes
+Crear eventos
+Establecer recurrencias automáticas para los eventos
+Enviar recordatiorios automaticos a tus clientes
+
+
+2. Periodo de Prueba
+
+
+Los usuarios nuevos disfrutan de un periodo de prueba gratuito de 7 días. Si decides no continuar con la suscripción antes de que finalice el periodo de prueba, no se te cobrará.
+
+
+3. Precio y Renovación Automática
+
+
+Precios actuales de suscripción:
+
+
+Esencial:
+* $12.99/mes,  por 50 recordatorios al mes ya sea por Whatsapp u otro servicio de mensajería más impuestos aplicables.
+Plus:
+* $29.99/mes,  por 200 recordatorios al mes ya sea por Whatsapp u otro servicio de mensajería más impuestos aplicables.
+Pro
+* $59.99/mes,  por 400 recordatorios al mes ya sea por Whatsapp u otro servicio de mensajería más impuestos aplicables.
+
+
+Renovación: Tu suscripción se renovará automáticamente cada mes.
+
+
+
+
+
+
+
+
+
+
+4. Cambios en el Precio y Notificaciones de Aumento
+
+
+Si decidimos cambiar el precio de la suscripción, te notificaremos al menos un mes antes del cambio a través del correo electrónico asociado a tu cuenta y mediante una notificación en la aplicación.
+Al continuar con la suscripción después de haber sido notificado sobre un aumento de precios, se entenderá que aceptas el nuevo costo.
+Tendrás la opción de aceptar el nuevo precio o cancelar tu suscripción antes de que el cambio de precio entre en vigor.
+
+
+5. Política de Cancelación
+
+
+Cómo Cancelar: Puedes cancelar tu suscripción en cualquier momento desde tu dispositivo iOS con los siguientes pasos: Ve a Ajustes > [tu nombre] > iTunes & App Store. Toca tu ID de Apple en la parte superior de la pantalla y luego Ver ID de Apple. Desplázate hacia abajo y toca Suscripciones. Elige la suscripción a Confirmo y toca Cancelar Suscripción.
+Efecto de la Cancelación: La cancelación será efectiva al final del ciclo de facturación actual. No se emitirán reembolsos por períodos de suscripción no utilizados.
+6. Uso Justo y Conducta del Usuario
+
+
+Esperamos que todos los usuarios utilicen los servicios de Confirmo de manera responsable y respetuosa. Cualquier uso indebido de los servicios puede resultar en la suspensión o terminación de la suscripción.
+
+
+7. Soporte y Contacto
+
+
+Si necesitas asistencia con nuestra aplicación o servicios, por favor contacta a nuestro equipo de soporte.
+
+
+8. Privacidad y Protección de Datos
+
+
+Nos comprometemos a proteger tu privacidad y datos personales de acuerdo con nuestra Política de Privacidad.
+
+
+Para obtener más detalles, te recomendamos revisar nuestra Política de Privacidad completa y las preguntas frecuentes en nuestro sitio web.
+
+
+9. Acuerdo de Licencia de Usuario Final de Apple
+
+
+
+
+Además de estos términos, el uso de la aplicación Confirmo está también regulado por el Acuerdo de Licencia de Usuario Final de Apple (EULA), que es un contrato legal entre el comprador o usuario final de la aplicación y Apple. Para ver los términos del EULA de Apple, por favor visita el siguiente enlace: EULA de Apple.
+
+
+10. Restricciones de Uso y Propiedad Intelectual
+
+
+ 
+
+
+Restricciones de Uso: Como usuario de Confirmo, te comprometes a no realizar ingeniería inversa, descompilar, desensamblar, modificar, crear obras derivadas, distribuir, licenciar, o vender cualquier software o contenido de la aplicación. El uso indebido o no autorizado de la aplicación, incluida la ingeniería inversa, es estrictamente prohibido y puede resultar en la terminación inmediata de tu suscripción y acciones legales.
+
+
+Propiedad Intelectual: Todos los derechos, títulos e intereses en Confirmo, incluyendo, pero no limitado a, su código, interfaces, gráficos, diseño, compilación, información, y todos los demás elementos de la aplicación son propiedad exclusiva de Cristian Borrero o sus licenciantes. El uso de la aplicación no te otorga propiedad de ningún derecho de propiedad intelectual en la aplicación o el acceso a ella.
+
+
+Protección de la Propiedad Intelectual: Aceptas respetar y proteger los derechos de propiedad intelectual de Cristian Borrero relacionados con Confirmo. Cualquier uso no autorizado de la aplicación que infrinja los derechos de propiedad intelectual puede resultar en acciones legales y responsabilidades civiles y/o penales.
