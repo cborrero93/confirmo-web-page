@@ -1,43 +1,24 @@
 ---
-import '../styles/global.css';
-import Navbar from '../components/Navbar.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
 import Features from '../components/Features.astro';
 import Pricing from '../components/Pricing.astro';
 import Contact from '../components/Contact.astro';
-import Footer from '../components/Footer.astro';
 ---
 
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/images/confirmo-favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Confirmo - Agenda una vez y confirma siempre. Plataforma de gestión de citas con notificaciones automatizadas por WhatsApp." />
-		<title>Confirmo - Agenda una vez y confirma siempre</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-	</head>
-	<body class="bg-background text-text">
-		<Navbar />
+<BaseLayout
+  title="Confirmo - Agenda una vez y confirma siempre"
+  description="Confirmo - Agenda una vez y confirma siempre. Plataforma de gestión de citas con notificaciones automatizadas por WhatsApp."
+>
+  <!-- Hero Section -->
+  <Hero />
 
-		<main>
-			<!-- Hero Section -->
-			<Hero />
+  <!-- Características Section -->
+  <Features />
 
-			<!-- Características Section -->
-			<Features />
+  <!-- Precios Section -->
+  <Pricing />
 
-			<!-- Precios Section -->
-			<Pricing />
-
-			<!-- Contacto Section -->
-			<Contact />
-		</main>
-
-		<!-- Footer -->
-		<Footer />
-	</body>
-</html>
+  <!-- Contacto Section -->
+  <Contact />
+</BaseLayout>

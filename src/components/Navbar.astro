@@ -6,33 +6,41 @@
   <div class="container mx-auto px-6 py-4">
     <div class="flex items-center justify-between">
       <!-- Logo -->
-      <a href="#inicio" class="flex items-center">
-        <img
-          src="/images/Confirmo-landing.png"
-          alt="Confirmo"
-          class="h-10 w-auto object-contain"
-        />
+      <a href="/#inicio" class="flex items-center">
+        <img src="/images/Confirmo-landing.png" alt="Confirmo" class="h-10 w-auto object-contain" />
       </a>
 
       <!-- Desktop Navigation -->
       <div class="hidden md:flex items-center gap-8">
-        <a href="#inicio" class="nav-link text-text hover:text-accent transition-colors duration-200">
+        <a
+          href="/#inicio"
+          class="nav-link text-text hover:text-accent transition-colors duration-200"
+        >
           Inicio
         </a>
-        <a href="#caracteristicas" class="nav-link text-text hover:text-accent transition-colors duration-200">
+        <a
+          href="/#caracteristicas"
+          class="nav-link text-text hover:text-accent transition-colors duration-200"
+        >
           Características
         </a>
-        <a href="#precios" class="nav-link text-text hover:text-accent transition-colors duration-200">
+        <a
+          href="/#precios"
+          class="nav-link text-text hover:text-accent transition-colors duration-200"
+        >
           Precios
         </a>
-        <a href="#contacto" class="nav-link text-text hover:text-accent transition-colors duration-200">
+        <a
+          href="/#contacto"
+          class="nav-link text-text hover:text-accent transition-colors duration-200"
+        >
           Contacto
         </a>
       </div>
 
       <!-- CTA Button -->
       <a
-        href="#contacto"
+        href="/#contacto"
         class="hidden md:block bg-accent text-primary px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition-all duration-200 hover:shadow-lg hover:scale-105"
       >
         Comenzar Gratis
@@ -45,7 +53,11 @@
         aria-label="Toggle menu"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
@@ -54,20 +66,29 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-primary border-t border-border">
     <div class="container mx-auto px-6 py-4 flex flex-col gap-4">
-      <a href="#inicio" class="mobile-nav-link text-text hover:text-accent transition-colors py-2">
+      <a href="/#inicio" class="mobile-nav-link text-text hover:text-accent transition-colors py-2">
         Inicio
       </a>
-      <a href="#caracteristicas" class="mobile-nav-link text-text hover:text-accent transition-colors py-2">
+      <a
+        href="/#caracteristicas"
+        class="mobile-nav-link text-text hover:text-accent transition-colors py-2"
+      >
         Características
       </a>
-      <a href="#precios" class="mobile-nav-link text-text hover:text-accent transition-colors py-2">
+      <a
+        href="/#precios"
+        class="mobile-nav-link text-text hover:text-accent transition-colors py-2"
+      >
         Precios
       </a>
-      <a href="#contacto" class="mobile-nav-link text-text hover:text-accent transition-colors py-2">
+      <a
+        href="/#contacto"
+        class="mobile-nav-link text-text hover:text-accent transition-colors py-2"
+      >
         Contacto
       </a>
       <a
-        href="#contacto"
+        href="/#contacto"
         class="bg-accent text-primary px-6 py-2.5 rounded-lg font-semibold text-center hover:opacity-90 transition-all duration-200"
       >
         Comenzar Gratis
@@ -99,30 +120,54 @@
 
   // Close mobile menu when clicking a link
   const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-  mobileNavLinks.forEach(link => {
+  mobileNavLinks.forEach((link) => {
     link.addEventListener('click', () => {
       mobileMenu?.classList.add('hidden');
     });
   });
 
-  // Smooth scroll for all navigation links
-  navLinks.forEach(link => {
+  // Smooth scroll for all navigation links (only on homepage)
+  navLinks.forEach((link) => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
       const href = link.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
+
+      // Only apply smooth scroll if we're on the homepage
+      if (window.location.pathname === '/' && href && href.includes('#')) {
+        e.preventDefault();
+
+        // Extract the hash (works for both "#section" and "/#section")
+        const hash = href.includes('/#') ? href.split('/#')[1] : href.substring(1);
+        const targetElement = document.getElementById(hash);
+
         if (targetElement) {
           const navbarHeight = navbar?.offsetHeight || 0;
           const targetPosition = targetElement.offsetTop - navbarHeight;
           window.scrollTo({
             top: targetPosition,
-            behavior: 'smooth'
+            behavior: 'smooth',
           });
         }
       }
+      // If we're NOT on homepage, let the browser handle navigation to /#section
     });
+  });
+
+  // On page load, scroll to hash if present (when arriving from another page)
+  window.addEventListener('load', () => {
+    if (window.location.pathname === '/' && window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      const targetElement = document.getElementById(hash);
+      if (targetElement) {
+        setTimeout(() => {
+          const navbarHeight = navbar?.offsetHeight || 0;
+          const targetPosition = targetElement.offsetTop - navbarHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth',
+          });
+        }, 100); // Small delay to ensure page is fully loaded
+      }
+    }
   });
 </script>
 

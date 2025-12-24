@@ -1,0 +1,16 @@
+# Build outputs
+dist/
+.astro/
+_astro/
+
+# Dependencies
+node_modules/
+
+# Lock files
+package-lock.json
+
+# Firebase
+.firebase/
+
+# Cache
+.cache/

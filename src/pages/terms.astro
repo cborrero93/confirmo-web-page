@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const sections = [
+  {
+    title: "Introducción",
+    content: "[PLACEHOLDER: Bienvenido a los términos y condiciones de Confirmo. Por favor, lee cuidadosamente este documento antes de usar nuestros servicios. Al acceder y utilizar nuestra plataforma, aceptas estar sujeto a estos términos.]"
+  },
+  {
+    title: "Aceptación de Términos",
+    content: "[PLACEHOLDER: Al registrarte y usar Confirmo, confirmas que has leído, entendido y aceptado estos términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, no debes utilizar nuestro servicio.]"
+  },
+  {
+    title: "Descripción del Servicio",
+    content: "[PLACEHOLDER: Confirmo es una plataforma de gestión de citas con notificaciones automatizadas. Nuestro servicio permite a los usuarios programar citas, enviar recordatorios automáticos por WhatsApp y gestionar servicios recurrentes.]"
+  },
+  {
+    title: "Registro y Cuenta de Usuario",
+    content: "[PLACEHOLDER: Para utilizar Confirmo, debes crear una cuenta proporcionando información precisa y actualizada. Eres responsable de mantener la confidencialidad de tus credenciales de acceso y de todas las actividades que ocurran bajo tu cuenta.]"
+  },
+  {
+    title: "Uso Aceptable",
+    content: "[PLACEHOLDER: Te comprometes a utilizar Confirmo únicamente para fines legítimos y de acuerdo con estos términos. No debes usar el servicio para enviar spam, contenido ilegal, o para cualquier actividad que viole los derechos de terceros.]"
+  },
+  {
+    title: "Privacidad y Protección de Datos",
+    content: "[PLACEHOLDER: El uso de tus datos personales está regido por nuestra Política de Privacidad. Al usar Confirmo, aceptas la recopilación y uso de tu información según se describe en dicha política.]"
+  },
+  {
+    title: "Propiedad Intelectual",
+    content: "[PLACEHOLDER: Todos los derechos de propiedad intelectual sobre Confirmo, incluyendo el software, diseño, contenido y marca, son propiedad de Confirmo o de sus licenciantes. No puedes copiar, modificar o distribuir ningún elemento sin autorización.]"
+  },
+  {
+    title: "Limitación de Responsabilidad",
+    content: "[PLACEHOLDER: Confirmo se proporciona 'tal cual' sin garantías de ningún tipo. No nos hacemos responsables de daños indirectos, incidentales o consecuentes derivados del uso del servicio. Nuestra responsabilidad máxima se limita al importe pagado por el servicio.]"
+  },
+  {
+    title: "Modificaciones del Servicio",
+    content: "[PLACEHOLDER: Nos reservamos el derecho de modificar, suspender o discontinuar el servicio en cualquier momento. También podemos actualizar estos términos periódicamente. Te notificaremos sobre cambios importantes con antelación razonable.]"
+  },
+  {
+    title: "Terminación",
+    content: "[PLACEHOLDER: Puedes cancelar tu cuenta en cualquier momento. Nos reservamos el derecho de suspender o terminar tu acceso al servicio si violas estos términos o por cualquier otra razón justificada.]"
+  },
+  {
+    title: "Ley Aplicable",
+    content: "[PLACEHOLDER: Estos términos se rigen por las leyes de España. Cualquier disputa relacionada con estos términos estará sujeta a la jurisdicción exclusiva de los tribunales españoles.]"
+  },
+  {
+    title: "Contacto",
+    content: "[PLACEHOLDER: Si tienes preguntas sobre estos términos y condiciones, puedes contactarnos en: hola@confirmoapp.com]"
+  }
+];
+
+const lastUpdated = "23 de diciembre de 2025";
+---
+
+<BaseLayout
+  title="Términos y Condiciones - Confirmo"
+  description="Términos y condiciones de uso de Confirmo. Lee nuestros términos de servicio y condiciones de uso de la plataforma."
+>
+  <!-- Hero Section -->
+  <section class="py-20 lg:py-28 bg-background">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-text mb-6">
+        Términos y <span class="text-accent">Condiciones</span>
+      </h1>
+      <p class="text-lg text-icons">
+        Última actualización: {lastUpdated}
+      </p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="py-12 lg:py-16 bg-primary">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="space-y-12">
+        {sections.map((section, index) => (
+          <div class="legal-section">
+            <h2 class="text-2xl md:text-3xl font-bold text-text mb-6">
+              <span class="text-accent">{index + 1}.</span> {section.title}
+            </h2>
+            <div class="prose prose-lg">
+              <p class="text-base md:text-lg text-text leading-relaxed">
+                {section.content}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .legal-section {
+    scroll-margin-top: 100px;
+  }
+
+  .prose {
+    max-width: none;
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+
+  .prose strong {
+    font-weight: 600;
+    color: #3C3D3A;
+  }
+
+  .prose a {
+    color: #C96442;
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    opacity: 0.8;
+  }
+
+  .prose ul,
+  .prose ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+</style>
